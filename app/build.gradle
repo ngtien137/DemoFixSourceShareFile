@@ -64,7 +64,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.leaf.explorer"
+        applicationId "com.example.demosharefile"
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 130
@@ -99,13 +99,13 @@ android {
 
     productFlavors {
         fossReliant {
-            applicationId = 'com.leaf.explorer'
+            applicationId = 'com.example.demosharefile'
             dimension 'mode'
             signingConfig signingConfigs.gbDistribution
         }
 
         googlePlay {
-            applicationId = 'com.leaf.explorer.pro'
+            applicationId = 'com.example.demosharefile.pro'
             dimension 'mode'
             signingConfig signingConfigs.gbDistribution
         }

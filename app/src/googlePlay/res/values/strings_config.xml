@@ -18,6 +18,6 @@
   -->
 
 <resources>
-    <string name="package_name" translatable="false">com.leaf.explorer.pro</string>
-    <string name="file_provider" translatable="false">org.monora.uprotocol.client.android.pro.fileprovider</string>
+    <string name="package_name" translatable="false">com.example.demosharefile.pro</string>
+    <string name="file_provider" translatable="false">com.example.demosharefile.pro.fileprovider</string>
 </resources>

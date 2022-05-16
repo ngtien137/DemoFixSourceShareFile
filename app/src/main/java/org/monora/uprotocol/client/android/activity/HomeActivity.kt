@@ -170,7 +170,7 @@ class HomeActivity : Activity(), NavigationView.OnNavigationItemSelectedListener
                 startActivity(
                     Intent(
                         applicationContext,
-                        Class.forName("com.leaf.explorer.MusicActivity")
+                        Class.forName("com.example.demosharefile.MusicActivity")
                     )
                 )
             } catch (e: ClassNotFoundException) {

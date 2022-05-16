@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.leaf.explorer.fragment.SongsFragment">
+    tools:context="com.example.demosharefile.fragment.SongsFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/search_toolbar"

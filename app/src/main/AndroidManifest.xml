@@ -126,7 +126,7 @@
             android:parentActivityName="org.monora.uprotocol.client.android.activity.HomeActivity" />
 
         <activity
-            android:name="com.leaf.explorer.MusicActivity"
+            android:name="com.example.demosharefile.MusicActivity"
             android:label="@string/music"
             android:theme="@style/Theme.TrebleShot.NoActionBar"
             android:exported="true">
@@ -176,7 +176,7 @@
         </service>
 
         <service
-            android:name="com.leaf.explorer.player.PlayerService"
+            android:name="com.example.demosharefile.player.PlayerService"
             android:exported="false" />
     </application>
 </manifest>
