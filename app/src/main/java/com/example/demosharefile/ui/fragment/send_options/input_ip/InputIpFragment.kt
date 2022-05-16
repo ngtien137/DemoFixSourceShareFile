@@ -3,7 +3,7 @@ package com.example.demosharefile.ui.fragment.send_options.input_ip
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import com.base.baselibrary.utils.observer
-import com.example.demosharefile.viewmodel.MainViewModel
+import com.example.demosharefile.ui.activity.ActivityMainViewModel
 import com.example.demosharefile.ui.fragment.BaseMainFragment
 import dagger.hilt.android.AndroidEntryPoint
 import org.monora.uprotocol.client.android.R
@@ -18,7 +18,7 @@ class InputIpFragment : BaseMainFragment<FragmentInputIpBinding>() {
 
     private val viewModel by viewModels<InputIpViewModel>()
 
-    private val mainViewModel by activityViewModels<MainViewModel>()
+    private val mainViewModel by activityViewModels<ActivityMainViewModel>()
 
     //endregion
 

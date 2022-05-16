@@ -17,6 +17,13 @@
   -->
 
 <resources>
+    <color name="color_title">#242424</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="red">#f00</color>
+    <color name="green">#0f0</color>
+    <color name="blue">#00f</color>
+    <color name="transparent">#0000</color>
     <!-- Launcher related -->
     <color name="ic_launcher_background">#47BF4B</color>
     <!-- Launcher related end -->
