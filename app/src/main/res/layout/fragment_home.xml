@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="homeViewModel"
+            type="com.example.demosharefile.ui.fragment.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.home.HomeFragment">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSend"
+            style="@style/TextRoboto500"
+            debounceClick="@{()->homeViewModel.clickSend()}"
+            android:layout_width="@dimen/none"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_18sdp"
+            android:background="#3A3AD6"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnReceive"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnReceive"
+            style="@style/TextRoboto500"
+            debounceClick="@{()->homeViewModel.clickReceive()}"
+            android:layout_width="@dimen/none"
+            android:layout_height="@dimen/none"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="#03C603"
+            android:text="@string/receive"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintBottom_toBottomOf="@id/btnSend"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnSend"
+            app:layout_constraintTop_toTopOf="@id/btnSend" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -17,6 +17,15 @@
   -->
 
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="send">Send</string>
+    <string name="pager_image">Image</string>
+    <string name="pager_audio">Audio</string>
+    <string name="online_devices">Online Devices</string>
+    <string name="manual_address">Manual Address</string>
+    <string name="confirm">Confirm</string>
+    <string name="ip_address">Ip Address</string>
+
     <string name="app_name" translatable="false">Leaf Explorer</string>
     <string name="open_navigation_drawer">Open Navigation Drawer</string>n
     <string name="close_navigation_drawer">Close Navigation Drawer</string>

@@ -3,6 +3,7 @@ package com.base.baselibrary.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.ActivityNavigator
@@ -15,7 +16,7 @@ import com.base.baselibrary.utils.bitmap.drawViewToBitmap
 import com.base.baselibrary.utils.cache.BitmapCache
 import org.monora.uprotocol.client.android.R
 
-abstract class BaseNavigationFragment<BD : ViewDataBinding, A : BaseActivity<*>> :
+abstract class BaseNavigationFragment<BD : ViewDataBinding, A : AppCompatActivity> :
     BaseFragment<BD, A>() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -32,10 +33,6 @@ abstract class BaseNavigationFragment<BD : ViewDataBinding, A : BaseActivity<*>>
                 }
             }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
-    }
-
-    fun changeFullscreenMode(isEnable: Boolean) {
-        rootActivity.changeFullscreenMode(isEnable)
     }
 
     open fun setHandleBack() = true

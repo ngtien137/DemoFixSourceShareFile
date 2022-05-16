@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.demosharefile.ui.fragment.send_options.input_ip.InputIpViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_8sdp"
+        tools:context=".ui.fragment.send_options.input_ip.InputIpFragment">
+
+        <EditText
+            android:id="@+id/edtIp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:hint="@string/ip_address"
+            android:text="@={viewModel.liveIpText}"
+            android:textColor="@color/color_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/TextRoboto500"
+            debounceClick="@{()->viewModel.onClickConfirm()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="#0f0"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtIp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.demosharefile.ui.fragment.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_contentBrowserFragment"
+            app:destination="@id/contentBrowserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contentBrowserFragment"
+        android:name="com.example.demosharefile.ui.fragment.content_browser.ContentBrowserFragment"
+        android:label="ContentBrowserFragment"
+        tools:layout="@layout/fragment_content_browser">
+        <action
+            android:id="@+id/action_contentBrowserFragment_to_sendOptionsFragment"
+            app:destination="@id/sendOptionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendOptionsFragment"
+        android:name="com.example.demosharefile.ui.fragment.send_options.SendOptionsFragment"
+        android:label="SendOptionsFragment"
+        tools:layout="@layout/fragment_send_options">
+        <action
+            android:id="@+id/action_sendOptionsFragment_to_inputIpFragment"
+            app:destination="@id/inputIpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputIpFragment"
+        android:name="com.example.demosharefile.ui.fragment.send_options.input_ip.InputIpFragment"
+        android:label="InputIpFragment"
+        tools:layout="@layout/fragment_input_ip" />
+</navigation>

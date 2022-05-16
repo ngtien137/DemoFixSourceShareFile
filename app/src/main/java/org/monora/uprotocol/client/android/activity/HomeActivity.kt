@@ -28,6 +28,7 @@ import androidx.activity.viewModels
 import androidx.annotation.IdRes
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
@@ -148,7 +149,7 @@ class HomeActivity : Activity(), NavigationView.OnNavigationItemSelectedListener
     }
 
     override fun onBackPressed() {
-        if (drawerLayout.isDrawerOpen(Gravity.START)) {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.close()
         } else {
             super.onBackPressed()
