@@ -1,19 +1,19 @@
-package com.example.demosharefilekotlin.ui.fragment.content_browser.pager.image
+package com.example.demosharefile.ui.fragment.content_browser.pager.image
 
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import com.base.baselibrary.utils.getAppString
 import com.base.baselibrary.utils.observer
-import com.example.demosharefilekotlin.R
-import com.example.demosharefilekotlin.databinding.FragmentPagerImageBinding
-import com.example.demosharefilekotlin.model.media.AppImage
-import com.example.demosharefilekotlin.ui.activity.MainViewModel
+import com.example.demosharefile.model.media.AppImage
+import com.example.demosharefile.ui.activity.ActivityMainViewModel
 import com.example.demosharefile.ui.fragment.BaseMainFragment
-import com.example.demosharefilekotlin.ui.fragment.content_browser.ContentBrowserFragmentDirections
 import com.example.demosharefile.ui.fragment.content_browser.pager.IPagerMediaFragment
 import com.example.demosharefile.ui.fragment.content_browser.pager.adaper.AdapterContentImage
 import com.example.demosharefile.ui.fragment.content_browser.pager.adaper.ListenerAdapterContentImage
 import dagger.hilt.android.AndroidEntryPoint
+import org.monora.uprotocol.client.android.R
+import org.monora.uprotocol.client.android.databinding.FragmentPagerImageBinding
+import org.monora.uprotocol.client.android.fragment.ContentBrowserFragmentDirections
 
 @AndroidEntryPoint
 class PagerImageFragment : BaseMainFragment<FragmentPagerImageBinding>(), IPagerMediaFragment,
@@ -27,7 +27,7 @@ class PagerImageFragment : BaseMainFragment<FragmentPagerImageBinding>(), IPager
 
     private val viewModel by viewModels<PagerImageViewModel>()
 
-    private val mainViewModel by activityViewModels<MainViewModel>()
+    private val mainViewModel by activityViewModels<ActivityMainViewModel>()
 
     companion object {
 
@@ -61,7 +61,7 @@ class PagerImageFragment : BaseMainFragment<FragmentPagerImageBinding>(), IPager
                     mainViewModel.applySelectedImages(viewModel.getListSelectedImages())
                     navigateTo(
                         R.id.contentBrowserFragment,
-                        ContentBrowserFragmentDirections.actionContentBrowserFragmentToSendOptionsFragment()
+                        com.example.demosharefile.ui.fragment.content_browser.ContentBrowserFragmentDirections.actionContentBrowserFragmentToSendOptionsFragment()
                     )
                 }
             }

@@ -5,7 +5,7 @@ import androidx.fragment.app.viewModels
 import com.example.demosharefile.ui.fragment.content_browser.pager.adaper.AdapterPagerMedia
 import com.example.demosharefile.ui.fragment.content_browser.pager.audio.PagerAudioFragment
 import com.example.demosharefile.ui.fragment.BaseMainFragment
-import com.example.demosharefilekotlin.ui.fragment.content_browser.pager.image.PagerImageFragment
+import com.example.demosharefile.ui.fragment.content_browser.pager.image.PagerImageFragment
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
 import org.monora.uprotocol.client.android.R

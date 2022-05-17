@@ -11,7 +11,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.demosharefilekotlin.ui.fragment.content_browser.pager.image.PagerImageViewModel" />
+            type="com.example.demosharefile.ui.fragment.content_browser.pager.image.PagerImageViewModel" />
 
     </data>
 

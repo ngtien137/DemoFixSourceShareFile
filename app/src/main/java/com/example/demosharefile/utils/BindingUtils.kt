@@ -31,7 +31,9 @@ import com.base.baselibrary.utils.onDebouncedClickGlobal
 import com.base.baselibrary.views.rv_touch_helper.ItemTouchHelperExtension
 import com.base.baselibrary.views.rv_touch_helper.VerticalDragTouchHelper
 import com.bumptech.glide.Glide
+import com.example.demosharefile.model.media.AppImage
 import com.google.android.material.appbar.AppBarLayout
+import org.monora.uprotocol.client.android.R
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -387,3 +389,12 @@ fun setScrollable(appBarLayout: AppBarLayout, scrollable: Boolean) {
     layoutParams.behavior = behavior
 }
 
+@BindingAdapter("glide_load_image")
+fun ImageView.glideLoadMediaImage(media: AppImage?) {
+    media?.let {
+        post {
+            Glide.with(this).load(media.fileUri ?: media.path).placeholder(R.color.white)
+                .override(width, height).into(this)
+        }
+    }
+}

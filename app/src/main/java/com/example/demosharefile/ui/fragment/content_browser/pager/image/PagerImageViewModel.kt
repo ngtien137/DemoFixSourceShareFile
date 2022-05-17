@@ -1,16 +1,15 @@
-package com.example.demosharefilekotlin.ui.fragment.content_browser.pager.image
+package com.example.demosharefile.ui.fragment.content_browser.pager.image
 
 import androidx.lifecycle.MutableLiveData
 import com.base.baselibrary.viewmodel.Event
 import com.base.baselibrary.viewmodel.EventViewModel
 import com.base.baselibrary.viewmodel.ViewModelUtils.doJob
 import com.base.baselibrary.views.ext.loge
-import com.example.demosharefilekotlin.model.media.AppImage
-import com.example.demosharefilekotlin.repository.ImageRepository
+import com.example.demosharefile.model.media.AppImage
+import com.example.demosharefile.repository.ImageRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import java.util.*
 import javax.inject.Inject
-import kotlin.collections.ArrayList
 
 @HiltViewModel
 class PagerImageViewModel @Inject constructor(private val imageRepository: ImageRepository) :
