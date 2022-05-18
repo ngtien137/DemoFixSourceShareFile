@@ -20,6 +20,12 @@ class AppImage() : AppMedia() {
     @MediaInfo(MediaStore.Images.Media.DATE_MODIFIED)
     override var dateModified: Long = -1
 
+    @MediaInfo(MediaStore.Images.Media.MIME_TYPE)
+    override var mimeType: String = ""
+
+    @MediaInfo(MediaStore.Images.Media.SIZE)
+    override var size: Long = 0L
+
     @MediaInfo(MediaStore.Images.Media.BUCKET_DISPLAY_NAME)
     var bucketName: String? = ""
 

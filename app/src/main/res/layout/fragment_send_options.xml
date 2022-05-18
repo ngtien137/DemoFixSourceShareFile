@@ -5,15 +5,23 @@
 
     <data>
 
+        <import type="com.example.demosharefile.ui.fragment.send_options.SendOptionsViewModel" />
+
+        <import type="com.example.demosharefile.ui.fragment.send_options.SendOptionsViewModel.ClientConnectionStatus" />
+
         <variable
             name="viewModel"
-            type="com.example.demosharefile.ui.fragment.send_options.SendOptionsViewModel" />
+            type="SendOptionsViewModel" />
+
+        <variable
+            name="adapter"
+            type="androidx.recyclerview.widget.RecyclerView.Adapter" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/_8sdp"
         tools:context=".ui.fragment.send_options.SendOptionsFragment">
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -21,6 +29,7 @@
             style="@style/TextRoboto500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
             android:text="@string/online_devices"
             android:textColor="@color/color_title"
             android:textSize="@dimen/_18ssp"
@@ -29,22 +38,25 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvOnlineDevices"
+            rv_set_adapter="@{adapter}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/_4sdp"
             android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintDimensionRatio="H,1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvOnlineDevices" />
+            app:layout_constraintTop_toBottomOf="@id/tvOnlineDevices"
+            app:spanCount="2"
+            tools:listitem="@layout/item_online_client" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvManualAddress"
             style="@style/TextRoboto500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_margin="@dimen/_8sdp"
             android:text="@string/manual_address"
             android:textColor="@color/color_title"
             android:textSize="@dimen/_18ssp"
@@ -56,6 +68,7 @@
             debounceClick="@{()->viewModel.onClickManualAddress()}"
             android:layout_width="0dp"
             android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/_8sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:elevation="@dimen/_2sdp"
             android:foreground="?selectableItemBackground"
@@ -72,6 +85,25 @@
                 android:textSize="@dimen/_16ssp" />
 
         </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8000"
+            android:gravity="center"
+            android:visibility="@{viewModel.liveConnecting == true}"
+            tools:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextRoboto500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connecting..."
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18ssp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

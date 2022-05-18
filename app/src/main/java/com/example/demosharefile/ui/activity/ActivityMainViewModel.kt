@@ -8,7 +8,7 @@ import javax.inject.Inject
 @HiltViewModel
 class ActivityMainViewModel @Inject constructor() : ViewModel() {
 
-    private val listSelectedImages = ArrayList<AppImage>()
+    val listSelectedImages = ArrayList<AppImage>()
 
     fun applySelectedImages(list: Collection<AppImage>?) {
         listSelectedImages.clear()

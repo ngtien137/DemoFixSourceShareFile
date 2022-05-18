@@ -10,10 +10,13 @@ open class AppMedia(
     open var name: String = "",
     open var path: String = "",
     open var dateAdded: Long = -1,
-    open var dateModified: Long = -1
+    open var dateModified: Long = -1,
+    open var mimeType:String = "",
+    open var size:Long = 0L
 ) : MediaModelBase() {
 
     var fileUri: Uri? = null
+
 
     override fun getUri(): Uri {
         return MediaStore.Images.Media.EXTERNAL_CONTENT_URI

@@ -31,9 +31,15 @@ import com.base.baselibrary.utils.onDebouncedClickGlobal
 import com.base.baselibrary.views.rv_touch_helper.ItemTouchHelperExtension
 import com.base.baselibrary.views.rv_touch_helper.VerticalDragTouchHelper
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.demosharefile.model.media.AppImage
 import com.google.android.material.appbar.AppBarLayout
+import org.monora.uprotocol.client.android.GlideApp
 import org.monora.uprotocol.client.android.R
+import org.monora.uprotocol.client.android.util.Graphics
+import org.monora.uprotocol.client.android.util.picturePath
+import org.monora.uprotocol.core.protocol.Client
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -396,5 +402,25 @@ fun ImageView.glideLoadMediaImage(media: AppImage?) {
             Glide.with(this).load(media.fileUri ?: media.path).placeholder(R.color.white)
                 .override(width, height).into(this)
         }
+    }
+}
+
+@BindingAdapter("glide_load_client_image")
+fun loadPictureOfClient(imageView: ImageView, client: Client?) {
+    if (client == null) return
+
+    try {
+        val default = Graphics.createIconBuilder(imageView.context).buildRound(client.clientNickname)
+
+        GlideApp.with(imageView)
+            .load(imageView.context.getFileStreamPath(client.picturePath))
+            .circleCrop()
+            .diskCacheStrategy(DiskCacheStrategy.NONE)
+            .skipMemoryCache(true)
+            .placeholder(default)
+            .error(default)
+            .transition(DrawableTransitionOptions.withCrossFade())
+            .into(imageView)
+    } catch (ignored: Exception) {
     }
 }
