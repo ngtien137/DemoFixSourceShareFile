@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TrebleShot</string>
+    <string name="app_name">Demo Share</string>
     <string name="open_navigation_drawer">ナビゲーションドロワーを開く</string>
     <string name="close_navigation_drawer">ナビゲーションドロワーを閉じる</string>
     <string name="preferences">設定</string>

@@ -26,7 +26,7 @@
     <string name="confirm">Confirm</string>
     <string name="ip_address">Ip Address</string>
 
-    <string name="app_name" translatable="false">Leaf Explorer</string>
+    <string name="app_name" translatable="false">Demo Share</string>
     <string name="open_navigation_drawer">Open Navigation Drawer</string>n
     <string name="close_navigation_drawer">Close Navigation Drawer</string>
     <string name="preferences">Preferences</string>

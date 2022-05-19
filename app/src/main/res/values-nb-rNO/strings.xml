@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TrebleShot</string>
+    <string name="app_name">Demo Share</string>
     <string name="open_navigation_drawer">Åpne navigasjonsskuff</string>
     <string name="close_navigation_drawer">Lukk navigasjonsskuff</string>
     <string name="preferences">Innstillinger</string>
